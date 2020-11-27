@@ -1,5 +1,7 @@
 # Faça um programa que gera uma lista dos números primos existentes entre 1 e
 # um número inteiro informado pelo usuário.
+
+
 from os import system, name
 
 
@@ -47,3 +49,7 @@ if __name__ == "__main__":
                 main()
             else:
                 break
+
+# Gostei da sua lógica, nao tinha conseguido fazer, mas depois de ver o teu código eu acho que consigo fazer agora
+# Código muito bom e de fácil entendimento
+# Muito bom :)

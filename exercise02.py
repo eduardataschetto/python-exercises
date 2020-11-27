@@ -6,6 +6,8 @@
 #     comprar apenas latas de 18 litros;
 #     comprar apenas galões de 3,6 litros;
 #     misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
+
+ 
 from os import system, name
 
 
@@ -66,3 +68,7 @@ if __name__ == "__main__":
                 main()
             else:
                 break
+
+# Faltou um colocar a quantidade de galões e de tintas
+# Código organizado, o que ajuda no entendimento dos processos
+# Gostei da intuitividade do código

@@ -5,6 +5,8 @@
 #    6  - 6  7  2
 
 # Elabore uma função que identifica e mostra na tela todos os quadrados mágicos com as características acima. Dica: produza todas as combinações possíveis e verifique a soma quando completar cada quadrado. Usar um vetor de 1 a 9 parece ser mais simples que usar uma matriz 3x3. 
+
+
 from itertools import permutations
 
 def main():
@@ -39,3 +41,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Adorei que você conseguiu fazer esse exercio, eu achei ele muito difícil. Vou dar uma olhada nele mais a fundo pra ver se eu consigo fazer :)
+# você usou outras bibliotecas, muito bom
