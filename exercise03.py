@@ -1,6 +1,8 @@
 # Faça um Programa que peça os 3 lados de um triângulo.
 # O programa deverá informar se os valores podem ser um triângulo.
 # Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+
+
 from os import system, name
 
 
@@ -45,3 +47,6 @@ if __name__ == "__main__":
                 main()
             else:
                 break
+
+# Não identifiquei nenhum erro :)
+# Código organizado, muito bom.

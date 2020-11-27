@@ -2,6 +2,8 @@
 
 #     quantos espaços em branco existem na frase.
 #     quantas vezes aparecem as vogais a, e, i, o, u.
+
+
 from os import system, name
 import unicodedata
 
@@ -41,3 +43,7 @@ if __name__ == "__main__":
                 main()
             else:
                 break
+
+# Gostei bastante da sua lógica
+# você usou umas bibliotecas diferentes, vou ate dar uma pesquisada sobre elas
+# ademais o código aparenta estar muito bom

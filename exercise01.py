@@ -15,6 +15,7 @@
 #     - Sindicato ( 5%) : R$
 #     = Salário Liquido : R$
 
+
 from os import system, name
 
 
@@ -69,3 +70,6 @@ if __name__=="__main__":
             else:
                 print("Hasta la vista, baby...")
                 break
+
+# Código muito bem organizado
+# Muita boa a ideia de colocar os impostos numa lista, não tinha pensado nisso
