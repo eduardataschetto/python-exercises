@@ -31,6 +31,3 @@ if __name__ == "__main__":
                 main()
             else:
                 break
-    
-# uma dica seria de colacar no print o que cada valor seria, ficaria mais fácil de entender
-# mas o código está muito bom 

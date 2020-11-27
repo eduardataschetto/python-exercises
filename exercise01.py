@@ -63,13 +63,10 @@ if __name__=="__main__":
        while True:
         op = input("Deseja executar novamente? [S/N] ").upper()
 
-        if op in ['S', 'N']:
+        if op in 'SN':
             if op == 'S':
                 limpa_tela()
                 main()
             else:
                 print("Hasta la vista, baby...")
                 break
-
-# Código muito bem organizado
-# Muita boa a ideia de colocar os impostos numa lista, não tinha pensado nisso

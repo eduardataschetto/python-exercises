@@ -88,7 +88,7 @@ if __name__ == "__main__":
     while True:
         op = input("Deseja executar novamente? [S/N] ").upper()
 
-        if op in ['S', 'N']:
+        if op in 'SN':
             if op == 'S':
                 limpaTela()
                 main()

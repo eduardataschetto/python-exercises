@@ -39,5 +39,6 @@ def main():
                 print(f"[{q[i]} {q[i + 1]} {q[i + 2]}]", end=" ")
             print(']')
 
+
 if __name__ == "__main__":
     main()

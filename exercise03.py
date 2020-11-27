@@ -42,12 +42,9 @@ if __name__ == "__main__":
     main()
     while True:
         op = input("Deseja executar novamente? [S/N] ").upper()
-        if op in ['S', 'N']:
+        if op in 'SN':
             if op == 'S':
                 limpa_tela()
                 main()
             else:
                 break
-
-# Não identifiquei nenhum erro :)
-# Código organizado, muito bom.

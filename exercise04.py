@@ -44,7 +44,7 @@ if __name__ == "__main__":
     while True:
         op = input("Deseja gerar uma nova lista de primos? [S/N] ").upper()
 
-        if op in ['S', 'N']:
+        if op in 'SN':
             if op == 'S':
                 limpa_tela()
                 main()
