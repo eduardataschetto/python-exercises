@@ -15,7 +15,7 @@ def limpaTela():
         system('clear')
 
 
-def countChar(char:str, phrase:str) -> list:
+def countChar(char:str, phrase:str) -> int:
     new_ph = unicodedata.normalize("NFD", phrase).upper()
     count = new_ph.count(char.upper())
 
