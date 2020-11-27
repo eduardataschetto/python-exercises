@@ -10,17 +10,15 @@ def limpa_tela():
     else:
         system('clear')
 
-
-def rand():
-    return randint(1, 6)
-    
 def main():
     resultados = []
     for i in range(1, 100):
-        resultados.append(rand())
+        resultados.append(randint(1, 6))
 
+    print()
     for i in range(1, 7):
-        print(f"\t{i}: {resultados.count(i)}")
+        print(f"\tNÚMERO {i}: {resultados.count(i)}x")
+    print()
 
 if __name__ == "__main__":
     main()

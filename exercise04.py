@@ -30,12 +30,13 @@ def main():
     while True:
         try:
             n = int(input("Informe N: "))
+            break
         except ValueError as e:
             print(e)
             continue
-        primos = gera_primos(1, n)
-        print(primos)
-        break
+
+    primos = gera_primos(1, n)
+    print(primos)
 
 
 if __name__ == "__main__":
@@ -49,7 +50,3 @@ if __name__ == "__main__":
                 main()
             else:
                 break
-
-# Gostei da sua lógica, nao tinha conseguido fazer, mas depois de ver o teu código eu acho que consigo fazer agora
-# Código muito bom e de fácil entendimento
-# Muito bom :)

@@ -7,7 +7,7 @@
 #     comprar apenas galões de 3,6 litros;
 #     misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 
- 
+
 from os import system, name
 
 
@@ -22,20 +22,32 @@ def limpaTela():
         system('clear')
 
 
-def custo(valor:float, litros:float, litros_necessarios:float) -> float:
-    custo = (litros_necessarios // litros) * valor
-    custo += valor if litros_necessarios % litros != 0 else 0
-    return custo
+def custo(valor: float, litros: float, litros_necessarios: float, tipo: str) -> list:
+    qtd = (litros_necessarios // litros)
+    qtd += 1 if litros_necessarios % litros != 0 else 0
+    custo = qtd * valor
+
+    return [tipo, custo, qtd]
 
 
-def custoGalaoLata(litros_necessarios:float) -> float:
+def custoGalaoLata(litros_necessarios: float) -> list:
     global valor_galao, litros_galao, valor_lata, litros_lata
+
+    # computando a quantidade de latas necessárias
     count_lata = litros_necessarios // litros_lata
-    y = litros_necessarios % litros_lata
-    count_galao = y // litros_galao
-    custo = count_lata * valor_lata + count_galao * valor_galao
-    custo += valor_galao if y % litros_galao > 0 else 0
-    return custo
+    custo_lata = count_lata * valor_lata
+
+    resto = litros_necessarios % litros_lata
+
+    # computando a quantidade de galões necessáris
+    count_galao = resto // litros_galao
+    count_galao += 1 if resto % litros_galao > 0 else 0
+    custo_galao = count_galao * valor_galao
+
+    # calculando o custo total
+    custo_total = custo_lata + custo_galao
+
+    return[count_lata, custo_lata, count_galao, custo_galao, custo_total]
 
 
 def main():
@@ -45,16 +57,30 @@ def main():
             m = float(input("Informe o tamanho da área a ser pintada (m²): "))
             if m < 0:
                 continue
+            break
         except ValueError:
             print("Valor inválido! Tente novamente. ")
 
-        tinta_necessaria = (m / 6) * 1.1
+    tinta_necessaria = (m / 6) * 1.1
 
-        custo_lata = custo(valor_lata, litros_lata, tinta_necessaria)
-        custo_galão = custo(valor_galao, litros_galao, tinta_necessaria)
-        custo_lata_galao = custoGalaoLata(tinta_necessaria)
+    latas = custo(valor_lata, litros_lata, tinta_necessaria, "LATAS - 18L")
+    galoes = custo(valor_galao, litros_galao,
+                   tinta_necessaria, "GALÕES - 3.6L")
+    lata_galao = custoGalaoLata(tinta_necessaria)
 
-        print(f"M²: {m}\nCUSTO COM GALÕES: {custo_galão:.2f}\nCUSTO COM LATAS: {custo_lata}\nCUSTO MISTURANDO GALÕES E LATAS: {custo_lata_galao}")
+    # imprimindo orçamento para latas e galões
+    for i in [latas, galoes]:
+        print(
+            f"\n\tORÇAMENTO PARA {i[0]}\n\tCUSTO: {i[1]}\n\tQUANTIDADE: {int(i[2])}\n")
+
+    # imprimindo orçamento para a mistura de latas e galões
+    print(f"""\tORÇAMENTO PARA LATAS E GALÕES: 
+        QUANTIDADE DE LATAS: {int(lata_galao[0])}
+        CUSTO LATAS: {lata_galao[1]}
+        QUANTIDADE DE GALÕES: {int(lata_galao[2])}
+        CUSTO GALÕES: {lata_galao[3]}
+        CUSTO TOTAL: {lata_galao[4]}
+    """)
 
 
 if __name__ == "__main__":
@@ -68,7 +94,3 @@ if __name__ == "__main__":
                 main()
             else:
                 break
-
-# Faltou um colocar a quantidade de galões e de tintas
-# Código organizado, o que ajuda no entendimento dos processos
-# Gostei da intuitividade do código

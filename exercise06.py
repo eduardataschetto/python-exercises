@@ -41,6 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Adorei que você conseguiu fazer esse exercio, eu achei ele muito difícil. Vou dar uma olhada nele mais a fundo pra ver se eu consigo fazer :)
-# você usou outras bibliotecas, muito bom

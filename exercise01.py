@@ -29,6 +29,7 @@ def limpa_tela():
 def calcula_imposto(valor_hora:float, horas_trab):
     descontos = ['IMPOSTO DE RENDA', 0.11, 'INSS', 0.08, 'SINDICATO', 0.05]
     print(f"\n{'*'*10} CALCULO DE IMPOSTOS {'*'*10}\n")
+
     sal_bruto = valor_hora * horas_trab
     print(f"SALÁRIO BRUTO: R$ {sal_bruto:.2f}")
 
@@ -50,13 +51,12 @@ def main():
 
             if valor_hora < 0 and num_horas < 0:
                 continue
+            break
         except ValueError:
             print("Valor inválido! Tente novamente. ")
             continue
 
-        calcula_imposto(valor_hora, num_horas)
-
-        break
+    calcula_imposto(valor_hora, num_horas)
 
 if __name__=="__main__":
        main()

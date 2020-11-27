@@ -19,22 +19,23 @@ def main():
             a = float(input("Informe o lado A: "))
             b = float(input("Informe o lado B: "))
             c = float(input("Informe o lado C: "))
+            break
         except ValueError as e:
             print(e)
             continue
 
-        if a < (b+c) and b < (a+c) and c < (a+b):
-            print(f"Os valores {a}, {b} e {c} podem formar um triângulo!")
+    if a < (b+c) and b < (a+c) and c < (a+b):
+        print(f"Os valores {a}, {b} e {c} podem formar um triângulo!")
 
-            if a == b and b == c:
-                print("Triângulo Equilátero!")
-            elif a == b or b == c or a == c:
-                print("Triângulo Isósceles!")
-            else:
-                print("Triângulo Escaleno!")
+        if a == b and b == c:
+            print("Triângulo Equilátero!")
+        elif a == b or b == c or a == c:
+            print("Triângulo Isósceles!")
         else:
-            print(f"Os valores {a}, {b} e {c} não podem formar um triângulo!")
-        break
+            print("Triângulo Escaleno!")
+    else:
+        print(f"Os valores {a}, {b} e {c} não podem formar um triângulo!")
+        
 
 
 if __name__ == "__main__":
