@@ -12,13 +12,13 @@ def limpa_tela():
 
 def main():
     resultados = []
-    for i in range(1, 100):
+    for i in range(1, 101):
         resultados.append(randint(1, 6))
 
-    print()
+    print('')
     for i in range(1, 7):
         print(f"\tNÚMERO {i}: {resultados.count(i)}x")
-    print()
+    print('')
 
 if __name__ == "__main__":
     main()
